@@ -9,8 +9,6 @@
 </head>
 <body>
 <div class="container">
-<h1><text-align><center>STUDENT DETAILS </center></text-align></h1>
-<br><br>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -23,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-	{% for stud in student %}  
+	{% for stud in object_list %}  
       <tr>
         <td>{{stud.student_id}}</td>
         <td>{{stud.first_name}}</td>
@@ -35,11 +33,9 @@
 	{% endfor %} 
 	</tbody>
 </table>
-<br>
-<button type="button" class="btn btn-primary pull-left btn-lg"><a href='/add' style="color: white">Add Student</a></button><button type="button" class="btn btn-primary pull-right btn-lg"><a href='/' style="color: white">Search Student</a></button>
-<!--<div class="text-left"><button type="button" class="btn btn-primary btn-lg"><a href='/add' style="color: white">Add Student</a></button>
-<div class="text-right"><button type="button" class="btn btn-primary btn-lg"><a href='/' style="color: white">Search Student</a></button>-->
-</div>
+<button type="button" class="btn btn-primary btn-lg"><a href='/add'>Add Student</a></button>
+<div class="btn-toolbar pull-right">
+<button type="button" class="btn btn-secondary btn-lg">Delete Student</button>
 </div>
 </div>
 </body>

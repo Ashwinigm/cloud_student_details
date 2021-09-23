@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from cloud_student_proj import views
+from cloud_student_proj.views import AddView, HomeView, SearchResultsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('show/',views.show)
+    path('show/',views.show),
+    path('show/',views.search_show),
+    path('add/', views.my_form, name='add'),
+    path('', HomeView.as_view(), name='home'),
+    path('search/', SearchResultsView.as_view(), name='search_results')
 ]
